@@ -1,7 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {
-  Button,
   SafeAreaView,
   View,
   Text,
@@ -9,22 +8,72 @@ import {
   StyleSheet,
   ScrollView,
   Dimensions,
-  Alert,
+  Modal,
+  TextInput,
 } from 'react-native';
 import Clipboard from '@react-native-clipboard/clipboard';
 
 const App = () => {
   const [copied, setCopied] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [text, onChangeText] = useState(['', '', '', '']);
+
   const copyToClipboard = () => {
     Clipboard.setString('password');
   };
   const copy = () => {
     setCopied(true);
-    setTimeout(() => setCopied(false), 250);
+    setTimeout(() => setCopied(false), 1000);
   };
   return (
     <SafeAreaView>
       <View style={styles.centerify}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => setModalVisible(!modalVisible)}>
+          <View style={styles.centerify}>
+            <View style={styles.modalView}>
+              <Text style={[styles.title, {margin: 20}]}>Add New</Text>
+              <TextInput
+                style={styles.input}
+                onChangeText={onChangeText[0]}
+                value={text[0]}
+                placeholder="Website Name"
+                keyboardType="default"
+              />
+              <TextInput
+                style={styles.input}
+                onChangeText={onChangeText[1]}
+                value={text[1]}
+                placeholder="Email Address"
+                keyboardType="default"
+              />
+              <TextInput
+                style={styles.input}
+                onChangeText={onChangeText[2]}
+                value={text[2]}
+                placeholder="Password"
+                keyboardType="default"
+              />
+              <TextInput
+                style={styles.input}
+                onChangeText={onChangeText[3]}
+                value={text[3]}
+                placeholder="Encryption Key (10>Key<25)"
+                keyboardType="number-pad"
+              />
+              <TouchableOpacity
+                style={[styles.addButtonBg, {margin: 20}]}
+                onPress={() => {
+                  setModalVisible(!modalVisible);
+                }}>
+                <Text style={styles.addButtonText}>Save</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
         <View style={styles.centerify}>
           <Text
             style={{
@@ -33,10 +82,12 @@ const App = () => {
               fontWeight: 'bold',
               margin: 30,
             }}>
-            encryptIt
+            {copied === true ? 'Copied' : 'encryptIt'}
           </Text>
           <View style={(styles.centerify, {margin: 40})}>
-            <TouchableOpacity style={styles.addButtonBg}>
+            <TouchableOpacity
+              style={styles.addButtonBg}
+              onPress={() => setModalVisible(true)}>
               <Text style={styles.addButtonText}>Add new</Text>
             </TouchableOpacity>
           </View>
@@ -133,12 +184,6 @@ const App = () => {
   );
 };
 const styles = StyleSheet.create({
-  appName: {
-    fontSize: 50,
-    // color: 'white',
-    fontWeight: 'bold',
-    margin: 30,
-  },
   addButtonText: {
     fontSize: 20,
     color: 'black',
@@ -175,6 +220,33 @@ const styles = StyleSheet.create({
   },
   group: {
     marginBottom: 10,
+  },
+  modalView: {
+    width: '100%',
+    margin: 50,
+    justifyContent: 'center',
+    backgroundColor: 'black',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 30,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  input: {
+    color: 'white',
+    width: '100%',
+    height: 40,
+    margin: 20,
+    borderWidth: 0.8,
+    borderRadius: 20,
+    borderColor: 'white',
+    padding: 10,
   },
 });
 
