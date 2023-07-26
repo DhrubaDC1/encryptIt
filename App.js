@@ -10,13 +10,31 @@ import {
   Dimensions,
   Modal,
   TextInput,
+  useColorScheme,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Clipboard from '@react-native-clipboard/clipboard';
+
+const data = [
+  {website: 'Amazon', email: 'dhruba@gmail.com'},
+  {website: 'Google', email: 'dhruba@gmail.com'},
+  {website: 'Microsoft', email: 'dhruba@outlook.com'},
+  {website: 'Apple', email: 'dhruba@icloud.com'},
+  {website: 'LinkedIn', email: 'dhruba@gmail.com'},
+  {website: 'GitHub', email: 'dhruba@gmail.com'},
+];
 
 const App = () => {
   const [copied, setCopied] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
-  const [text, onChangeText] = useState(['', '', '', '']);
+  const [textW, onChangeTextW] = useState();
+  const [textE, onChangeTextE] = useState();
+  const [textP, onChangeTextP] = useState();
+  const [textK, onChangeTextK] = useState();
+
+  const colorScheme = useColorScheme();
+  const color = colorScheme === 'dark' ? 'white' : 'black';
+  const notColor = colorScheme === 'dark' ? 'black' : 'white';
 
   const copyToClipboard = () => {
     Clipboard.setString('password');
@@ -25,12 +43,78 @@ const App = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   };
+  const styles = StyleSheet.create({
+    addButtonText: {
+      fontSize: 20,
+      color: 'white',
+      fontWeight: 'bold',
+    },
+    addButtonBg: {
+      backgroundColor: 'black',
+      width: 120,
+      height: 40,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 10,
+    },
+    centerify: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    view: {
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+    },
+    container: {
+      flex: 1,
+      marginHorizontal: 10,
+    },
+    title: {
+      fontSize: 30,
+      color: {color},
+      fontWeight: 'bold',
+    },
+    mail: {
+      fontSize: 25,
+      color: {color},
+    },
+    group: {
+      marginBottom: 10,
+    },
+    modalView: {
+      width: '100%',
+      margin: 50,
+      justifyContent: 'center',
+      backgroundColor: {notColor},
+      borderRadius: 20,
+      padding: 35,
+      alignItems: 'center',
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 10,
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 1,
+    },
+    input: {
+      color: {color},
+      width: '100%',
+      height: 40,
+      margin: 20,
+      borderWidth: 0.8,
+      borderRadius: 20,
+      borderColor: {color},
+      padding: 10,
+    },
+  });
   return (
     <SafeAreaView>
       <View style={styles.centerify}>
         <Modal
           animationType="slide"
-          transparent={true}
+          transparent={false}
           visible={modalVisible}
           onRequestClose={() => setModalVisible(!modalVisible)}>
           <View style={styles.centerify}>
@@ -38,29 +122,29 @@ const App = () => {
               <Text style={[styles.title, {margin: 20}]}>Add New</Text>
               <TextInput
                 style={styles.input}
-                onChangeText={onChangeText[0]}
-                value={text[0]}
+                onChangeText={onChangeTextW}
+                value={textW}
                 placeholder="Website Name"
                 keyboardType="default"
               />
               <TextInput
                 style={styles.input}
-                onChangeText={onChangeText[1]}
-                value={text[1]}
+                onChangeText={onChangeTextE}
+                value={textE}
                 placeholder="Email Address"
                 keyboardType="default"
               />
               <TextInput
                 style={styles.input}
-                onChangeText={onChangeText[2]}
-                value={text[2]}
+                onChangeText={onChangeTextP}
+                value={textP}
                 placeholder="Password"
                 keyboardType="default"
               />
               <TextInput
                 style={styles.input}
-                onChangeText={onChangeText[3]}
-                value={text[3]}
+                onChangeText={onChangeTextK}
+                value={textK}
                 placeholder="Encryption Key (10>Key<25)"
                 keyboardType="number-pad"
               />
@@ -77,7 +161,7 @@ const App = () => {
         <View style={styles.centerify}>
           <Text
             style={{
-              color: copied === true ? 'green' : 'white',
+              color: {color},
               fontSize: 50,
               fontWeight: 'bold',
               margin: 30,
@@ -95,87 +179,19 @@ const App = () => {
             <ScrollView
               style={styles.container}
               automaticallyAdjustsScrollIndicatorInsets={false}>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard();
-                  copy();
-                }}>
-                <Text style={styles.title}>Amazon</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Google</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Microsoft</Text>
-                <Text style={styles.mail}>dhruba@outlook.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Apple</Text>
-                <Text style={styles.mail}>dhruba@icloud.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>LinkedIn</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>GitHub</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Spotify</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Discord</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.group}
-                onPress={() => {
-                  copyToClipboard;
-                  copy();
-                }}>
-                <Text style={styles.title}>Aliexpress</Text>
-                <Text style={styles.mail}>dhruba@gmail.com</Text>
-              </TouchableOpacity>
+              {data.map((item, index) => (
+                <View key={index}>
+                  <TouchableOpacity
+                    style={styles.group}
+                    onPress={() => {
+                      copyToClipboard;
+                      copy();
+                    }}>
+                    <Text style={styles.title}>{item.website}</Text>
+                    <Text style={styles.mail}>{item.email}</Text>
+                  </TouchableOpacity>
+                </View>
+              ))}
             </ScrollView>
           </View>
         </View>
@@ -183,71 +199,5 @@ const App = () => {
     </SafeAreaView>
   );
 };
-const styles = StyleSheet.create({
-  addButtonText: {
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bold',
-  },
-  addButtonBg: {
-    backgroundColor: 'white',
-    width: 120,
-    height: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 10,
-  },
-  centerify: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  view: {
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-  container: {
-    flex: 1,
-    marginHorizontal: 10,
-  },
-  title: {
-    fontSize: 30,
-    color: 'white',
-    fontWeight: 'bold',
-  },
-  mail: {
-    fontSize: 25,
-    color: 'white',
-  },
-  group: {
-    marginBottom: 10,
-  },
-  modalView: {
-    width: '100%',
-    margin: 50,
-    justifyContent: 'center',
-    backgroundColor: 'black',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 30,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  input: {
-    color: 'white',
-    width: '100%',
-    height: 40,
-    margin: 20,
-    borderWidth: 0.8,
-    borderRadius: 20,
-    borderColor: 'white',
-    padding: 10,
-  },
-});
 
 export default App;
