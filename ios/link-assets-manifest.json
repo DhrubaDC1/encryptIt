@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Handjet-Black.ttf",
+      "sha1": "57e4deda901c9162f0dac46a679a559b7d6ed0d2"
+    },
+    {
+      "path": "assets/fonts/Handjet-Bold.ttf",
+      "sha1": "680581adc6a687419fb3894dc32ebdca9bd014dd"
+    },
+    {
+      "path": "assets/fonts/Handjet-ExtraBold.ttf",
+      "sha1": "e376a3292561d8302b38af68ef9e4a343150d8a8"
+    },
+    {
+      "path": "assets/fonts/Handjet-ExtraLight.ttf",
+      "sha1": "e864030ef5e7916e3b39f572421887fb568556d7"
+    },
+    {
+      "path": "assets/fonts/Handjet-Light.ttf",
+      "sha1": "a2c210ca099ea66db4e66b75de94d1da2a66cabe"
+    },
+    {
+      "path": "assets/fonts/Handjet-Medium.ttf",
+      "sha1": "3c5cb90a4f8d0e96e7d2e0f2b7e893a8eb30800d"
+    },
+    {
+      "path": "assets/fonts/Handjet-Regular.ttf",
+      "sha1": "5b0cf8be31ab6a324daa6f1e16dc30771e80384f"
+    },
+    {
+      "path": "assets/fonts/Handjet-SemiBold.ttf",
+      "sha1": "354ccb821386f2fafe7aaaf7d99a8ad91e327155"
+    },
+    {
+      "path": "assets/fonts/Handjet-Thin.ttf",
+      "sha1": "c7c41211c0ec397d1de2d8229fb7704971898c29"
+    }
+  ]
+}

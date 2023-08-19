@@ -12,8 +12,17 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1E102EBCD8E648A0A4B9154D /* Handjet-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC63591A9A374666A1627215 /* Handjet-Medium.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-encryptIt-encryptItTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-encryptIt-encryptItTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A0B883F7A5084625B3187388 /* Handjet-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAF608F445C543738EFB3B5A /* Handjet-Black.ttf */; };
+		A64859B1AD73442BA179D790 /* Handjet-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB79227E91B42C2BDA23AB5 /* Handjet-ExtraBold.ttf */; };
+		B731259A2E704C0C9EF75B1C /* Handjet-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFEC21026A5C4418B40C61B2 /* Handjet-Bold.ttf */; };
+		CAB567B28D0749B1805958AD /* Handjet-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9BA27327534DB4BB07BED0 /* Handjet-SemiBold.ttf */; };
+		D5DC89A0150E48EF8A7B5046 /* Handjet-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6AE2FA38DAE44C8A5516BBB /* Handjet-ExtraLight.ttf */; };
+		D903CF81823F45D69AC4B7C2 /* Handjet-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95ED0A99D9A141C7B00BEF1A /* Handjet-Light.ttf */; };
+		E97759807D4E417BB99328A9 /* Handjet-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9062BB658FF54FD083AFF00C /* Handjet-Thin.ttf */; };
+		FCFF7D3475584CB7AA0E6ED2 /* Handjet-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5C0C9C53C4FAFB0064666 /* Handjet-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +39,7 @@
 		00E356EE1AD99517003FC87E /* encryptItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = encryptItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* encryptItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = encryptItTests.m; sourceTree = "<group>"; };
+		0CB79227E91B42C2BDA23AB5 /* Handjet-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-ExtraBold.ttf"; path = "../assets/fonts/Handjet-ExtraBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* encryptIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = encryptIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = encryptIt/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = encryptIt/AppDelegate.mm; sourceTree = "<group>"; };
@@ -41,9 +51,17 @@
 		5709B34CF0A7D63546082F79 /* Pods-encryptIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptIt.release.xcconfig"; path = "Target Support Files/Pods-encryptIt/Pods-encryptIt.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-encryptIt-encryptItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptIt-encryptItTests.debug.xcconfig"; path = "Target Support Files/Pods-encryptIt-encryptItTests/Pods-encryptIt-encryptItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-encryptIt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-encryptIt.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF5C0C9C53C4FAFB0064666 /* Handjet-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Regular.ttf"; path = "../assets/fonts/Handjet-Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = encryptIt/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-encryptIt-encryptItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-encryptIt-encryptItTests.release.xcconfig"; path = "Target Support Files/Pods-encryptIt-encryptItTests/Pods-encryptIt-encryptItTests.release.xcconfig"; sourceTree = "<group>"; };
+		9062BB658FF54FD083AFF00C /* Handjet-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Thin.ttf"; path = "../assets/fonts/Handjet-Thin.ttf"; sourceTree = "<group>"; };
+		95ED0A99D9A141C7B00BEF1A /* Handjet-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Light.ttf"; path = "../assets/fonts/Handjet-Light.ttf"; sourceTree = "<group>"; };
+		AF9BA27327534DB4BB07BED0 /* Handjet-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-SemiBold.ttf"; path = "../assets/fonts/Handjet-SemiBold.ttf"; sourceTree = "<group>"; };
+		DC63591A9A374666A1627215 /* Handjet-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Medium.ttf"; path = "../assets/fonts/Handjet-Medium.ttf"; sourceTree = "<group>"; };
+		E6AE2FA38DAE44C8A5516BBB /* Handjet-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-ExtraLight.ttf"; path = "../assets/fonts/Handjet-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EAF608F445C543738EFB3B5A /* Handjet-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Black.ttf"; path = "../assets/fonts/Handjet-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFEC21026A5C4418B40C61B2 /* Handjet-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Handjet-Bold.ttf"; path = "../assets/fonts/Handjet-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				D086BB9684A14355B6BAE685 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +165,23 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-encryptIt-encryptItTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D086BB9684A14355B6BAE685 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EAF608F445C543738EFB3B5A /* Handjet-Black.ttf */,
+				EFEC21026A5C4418B40C61B2 /* Handjet-Bold.ttf */,
+				0CB79227E91B42C2BDA23AB5 /* Handjet-ExtraBold.ttf */,
+				E6AE2FA38DAE44C8A5516BBB /* Handjet-ExtraLight.ttf */,
+				95ED0A99D9A141C7B00BEF1A /* Handjet-Light.ttf */,
+				DC63591A9A374666A1627215 /* Handjet-Medium.ttf */,
+				7AF5C0C9C53C4FAFB0064666 /* Handjet-Regular.ttf */,
+				AF9BA27327534DB4BB07BED0 /* Handjet-SemiBold.ttf */,
+				9062BB658FF54FD083AFF00C /* Handjet-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +280,15 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A0B883F7A5084625B3187388 /* Handjet-Black.ttf in Resources */,
+				B731259A2E704C0C9EF75B1C /* Handjet-Bold.ttf in Resources */,
+				A64859B1AD73442BA179D790 /* Handjet-ExtraBold.ttf in Resources */,
+				D5DC89A0150E48EF8A7B5046 /* Handjet-ExtraLight.ttf in Resources */,
+				D903CF81823F45D69AC4B7C2 /* Handjet-Light.ttf in Resources */,
+				1E102EBCD8E648A0A4B9154D /* Handjet-Medium.ttf in Resources */,
+				FCFF7D3475584CB7AA0E6ED2 /* Handjet-Regular.ttf in Resources */,
+				CAB567B28D0749B1805958AD /* Handjet-SemiBold.ttf in Resources */,
+				E97759807D4E417BB99328A9 /* Handjet-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
