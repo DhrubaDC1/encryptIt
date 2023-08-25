@@ -26,9 +26,9 @@ const getNextKey = async () => {
   let keys = [];
   try {
     keys = await AsyncStorage.getAllKeys();
+    nextKey = keys.length == 0 ? 0 : parseInt(keys[keys.length - 1]) + 1;
+    return String(nextKey);
   } catch (error) {}
-  nextKey = parseInt(keys[keys.length - 1]) + 1;
-  return String(nextKey);
 };
 const clear = async () => {
   clear = await AsyncStorage.clear();
